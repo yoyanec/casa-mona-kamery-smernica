@@ -1,27 +1,28 @@
-/* A4 sign marking the monitored area; fonts and colour tokens come from casa-mona/casa-mona.css. */
+/* A5 sign marking the monitored area, dark variant of the Casa Mona design system.
+   Printed with a 3 mm bleed on every side; colour and font tokens come from casa-mona/casa-mona.css. */
 html { background: var(--gray-100); }
 body { margin: 0; font-family: var(--font-ui); color: var(--fg-1); -webkit-font-smoothing: antialiased; }
-.tabula { width: 210mm; min-height: 297mm; margin: 24px auto; background: #FFFFFF; color: #26282A; display: flex; box-sizing: border-box; box-shadow: var(--shadow-1); }
-.tabula-pruh { width: 34mm; flex: none; background: var(--accent); color: #FFFFFF; display: flex; flex-direction: column; align-items: center; padding: 16mm 0; gap: 8mm; }
-.tabula-pruh .logo { width: 16mm; height: 16mm; }
-.tabula-pruh .pikto { width: 20mm; height: 20mm; margin-top: 6mm; }
-.tabula-pruh .znacka { font-size: 9px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.72); writing-mode: vertical-rl; transform: rotate(180deg); margin-top: auto; }
-.tabula-obsah { flex: 1; padding: 16mm 16mm 14mm 14mm; display: flex; flex-direction: column; }
-.tabula-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3); margin: 0 0 6mm; }
-.tabula h1 { margin: 0 0 4mm; font-size: 30px; font-weight: 700; letter-spacing: -.018em; line-height: 1.12; text-wrap: balance; }
-.tabula-sub { margin: 0 0 9mm; font-size: 15px; color: var(--fg-2); line-height: 1.45; }
-.tabula dl { margin: 0; display: grid; grid-template-columns: 38mm 1fr; column-gap: 5mm; row-gap: 0; font-size: 13.5px; }
-.tabula dt { padding: 3.2mm 0; border-top: 1px solid var(--separator); font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); }
-.tabula dd { margin: 0; padding: 3.2mm 0; border-top: 1px solid var(--separator); color: #26282A; line-height: 1.45; }
-.tabula dd b { font-weight: 600; }
-.tabula-qr { margin-top: auto; padding-top: 8mm; display: flex; align-items: center; gap: 8mm; border-top: 1px solid var(--separator); }
-.tabula-qr svg { width: 34mm; height: 34mm; flex: none; }
-.tabula-qr p { margin: 0; font-size: 13.5px; color: var(--fg-2); line-height: 1.5; }
-.tabula-qr .url { display: block; margin-top: 2mm; font-family: var(--font-mono); font-size: 15px; color: #26282A; }
-.tabula-pata { margin-top: 8mm; font-size: 10px; color: var(--fg-3); }
+.tabula { width: 154mm; min-height: 216mm; margin: 24px auto; background: var(--gray-900); color: var(--fg-1); display: flex; box-sizing: border-box; box-shadow: var(--shadow-1); }
+.tabula-pruh { width: 27mm; flex: none; background: var(--accent); color: var(--btn-fg); display: flex; flex-direction: column; align-items: center; padding: 14mm 0 11mm 3mm; gap: 3mm; }
+.tabula-pruh .logo { width: 12mm; height: 12mm; }
+.tabula-pruh .pikto { width: 15mm; height: 15mm; margin-top: 7mm; }
+.tabula-pruh .znacka { font-size: 7.5px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(29,30,29,.78); white-space: nowrap; }
+.tabula-obsah { flex: 1; padding: 14mm 12mm 11mm 9mm; display: flex; flex-direction: column; }
+.tabula-eyebrow { font-size: 7.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3); margin: 0 0 4mm; }
+.tabula h1 { margin: 0 0 3mm; font-size: 23px; font-weight: 700; letter-spacing: -.018em; line-height: 1.12; text-wrap: balance; }
+.tabula-sub { margin: 0 0 6mm; font-size: 11.5px; color: var(--fg-2); line-height: 1.45; }
+.tabula dl { margin: 0; display: grid; grid-template-columns: 27mm 1fr; column-gap: 3.5mm; row-gap: 0; font-size: 10.5px; }
+.tabula dt { padding: 2.4mm 0; border-top: 1px solid var(--separator); font-size: 7.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); }
+.tabula dd { margin: 0; padding: 2.4mm 0; border-top: 1px solid var(--separator); color: var(--fg-2); line-height: 1.45; }
+.tabula dd b { font-weight: 600; color: var(--fg-1); }
+.tabula-qr { margin-top: auto; padding-top: 5.5mm; display: flex; align-items: center; gap: 5.5mm; border-top: 1px solid var(--separator); }
+.tabula-qr svg { width: 30mm; height: 30mm; flex: none; border-radius: 1.5mm; }
+.tabula-qr p { margin: 0; font-size: 10.5px; color: var(--fg-2); line-height: 1.5; }
+.tabula-qr .url { display: block; margin-top: 1.5mm; font-family: var(--font-mono); font-size: 12px; color: var(--fg-1); }
+.tabula-pata { margin-top: 5.5mm; font-size: 7.5px; color: var(--fg-3); }
 @media print {
-  @page { size: A4; margin: 0; }
+  @page { size: 154mm 216mm; margin: 0; }
   html { background: none; }
-  .tabula { margin: 0; box-shadow: none; min-height: 297mm; }
-  .tabula-pruh { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .tabula { margin: 0; box-shadow: none; min-height: 216mm; }
+  .tabula, .tabula-pruh, .tabula-qr svg { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }

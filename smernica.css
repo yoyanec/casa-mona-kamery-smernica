@@ -1,0 +1,31 @@
+/* Page layout of the directive; typography, colours and fonts come from casa-mona/casa-mona.css. */
+html { background: var(--bg-canvas); }
+body { margin: 0; font-family: var(--font-ui); color: var(--fg-1); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+.smernica { max-width: 760px; margin: 0 auto; padding: 32px 16px 72px; }
+.smernica-brand { display: flex; align-items: center; gap: 10px; padding-bottom: 14px; border-bottom: 1px solid var(--separator);
+  font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); }
+.smernica-brand svg { width: 22px; height: 22px; color: var(--accent); flex: none; }
+.smernica-brand span:last-child { margin-left: auto; font-weight: 500; }
+.smernica h1 { margin: 28px 0 8px; font-size: 28px; font-weight: 700; letter-spacing: -.016em; line-height: 1.18; text-wrap: balance; }
+.smernica-meta { margin: 0 0 8px; font-size: 14px; color: var(--fg-2); }
+.smernica h2 { margin: 36px 0 10px; padding-top: 16px; border-top: 1px solid var(--separator); font-size: 18px; font-weight: 700; letter-spacing: -.01em; }
+.smernica h3 { margin: 22px 0 6px; font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); }
+.smernica p, .smernica li { margin: 0 0 12px; font-size: 15.5px; color: var(--fg-2); text-wrap: pretty; }
+.smernica li { margin-bottom: 8px; }
+.smernica strong { color: var(--fg-1); font-weight: 600; }
+.smernica a { color: var(--accent); text-decoration: none; }
+.smernica a:hover { text-decoration: underline; }
+.smernica table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 8px 0 16px; }
+.smernica th { text-align: left; padding: 6px 10px 6px 0; font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--fg-3); border-bottom: 1px solid var(--fg-3); }
+.smernica td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--separator); color: var(--fg-2); vertical-align: top; }
+.smernica td:first-child { font-family: var(--font-mono); font-size: 12.5px; color: var(--accent); white-space: nowrap; }
+.smernica td:nth-child(2) { white-space: nowrap; }
+.smernica-footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--separator); font-size: 12.5px; color: var(--fg-3); }
+.smernica-footer a { color: inherit; }
+@media print {
+  @page { size: A4; margin: 18mm; }
+  .smernica { max-width: none; padding: 0; }
+  .smernica h2 { break-after: avoid; }
+  .smernica p, .smernica li { font-size: 11pt; }
+  .smernica a::after { content: none; }
+}
